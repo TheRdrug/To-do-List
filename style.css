@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background: url(Polygon\ Worlds\ Recolor\ \(Mark\ Kirkpatrick\).jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.app {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    width: 40%;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 30px;
+}
+.container{
+    padding: 10px 10px;
+    background-color: #ffdbde;
+    box-shadow: 0 1em 2em rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+#wrapper{
+    position: relative;
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+}
+#wrapper input{
+    width: 100%;
+    background-color: transparent;
+    color: #111111;
+    font-size: 15px;
+    border: none;
+    border-bottom: 2px solid #FEB7BD;
+    padding: 15px 5px;
+}
+#wrapper input:focus{
+    outline: none;
+    border-color: skyblue;
+}
+#wrapper button{
+    position: relative;
+    border-radius: 10px;
+    font-weight: 500;
+    background-color: #ffb4bb;
+    font-size: 15px;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+#task{
+    margin-top: 1em;
+    border-radius: 0.5em;
+    width: 100%;
+    position: relative;
+    padding:  1em 0.5em;
+}
+.task{
+    background-color: rgb(255, 255, 255);
+    padding: 0.8em 1em;
+    display: grid;
+    grid-template-columns: 1fr 8fr 2fr 2fr;
+    gap: 1em;
+    border-radius: 0.4em;
+    box-shadow: 0 0.5em 1em rgba(0,0,0,0.05);
+    align-items: center;
+    cursor: pointer;
+}
+.task:not(:first-child){
+    margin-top: 1em;
+}
+.task input[type="checkbox"]{
+    position: relative;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid #e1e1e1;
+}
+.task input[type="checkbox"]:before {
+    content: "";
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+.task input[type="checkbox"]:checked {
+    background-color: #FEB7BD;
+    border-color: #ffb4bb;
+}
+.task input[type="checkbox"]:checked:before {
+    position: absolute;
+    content: "\f00c";
+    color: #ffffff;
+    font-size: 0.8em;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+.task span{
+    font: 0.9em;
+    font-weight: 400;
+    word-break: break-all;
+}
+.task button{
+    color: #ffff;
+    width: 100%;
+    padding: 1em 0;
+    border-radius: 0.5em;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+.edit{
+    background-color: skyblue;
+}
+.delete{
+    background-color: red;
+}
+#pending-task span {
+    color: skyblue;
+}
+.completed {
+    text-decoration: line-through;
+    color: #a0a0a0;
+}
+#error{
+    text-align: center;
+    background-color: white;
+    color: red;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding: 10px 0;
+    display: none;
+}
